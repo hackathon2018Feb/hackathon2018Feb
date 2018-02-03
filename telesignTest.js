@@ -29,4 +29,7 @@ function messageCallback(error, responseBody) {
     console.error("Unable to send message. " + error);
   }
 }
-client.sms.message(messageCallback, phoneNumber, message, messageType);
+
+function sendLog(message) {
+  client.sms.message(messageCallback, phoneNumber, message, messageType)
+}
